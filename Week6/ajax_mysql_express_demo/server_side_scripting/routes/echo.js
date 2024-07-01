@@ -11,7 +11,7 @@ router.get("/", async function (req, res, next) {
 
 router.post("/submit", async function (req, res, next) {
   // new
-  const msg = req.body.messagezz;
+  const msg = req.body.message;
   console.log(req.body);
   const message = new model.Message(msg, new Date());
   await model.insertMany([message]);
